@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kevin Huangfu Books</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="kevinzaft.css">
+
+    <script>
+      $(function() {
+           $('#searchButton').click(function() {
+               if($("#searchField").val() === ""){
+                alert("Search field cannot be blank");
+                return false;
+               }
+           });        
+       });
+      
+      $(function() {
+       $('#th2').click(function(){
+         $("#bigPicture").attr('src',"books/horrorBack.jpg");
+         return false;
+       });
+      });
+
+      $(function() {
+       $('#th1').click(function(){
+         $("#bigPicture").attr('src',"books/horror.jpg");
+         return false;
+       });
+      });
+    </script>
+    <script>
+      $(function() {
+       $('#addToCart').click(function(){
+         alert($("#sel1").val() + " book(s) added to cart");
+         return false;
+       });
+      });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div style="display: inline-block;">
+            Welcome
+        </div>
+        
+        <div class="home-button">
+            <a href="main.html">
+                <img src="home-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+
+        <div class="cart-button">
+            <a href="cart.html">
+                <img src="cart-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <div style="width: 150px;float: left;">
+            <a href="main.html">
+                <img src="books-logo.png" style="width:150px;height:100px;border:0;">
+            </a>
+        </div>
+        <div style="width: 75%;float: left; padding-top: 30px;padding-left: 10px;">
+            <input id="searchField" class="form-control" placeholder="Search a title, keyword or author" type="text" name="search field" style="width: 100%;height: 30px;padding-left: 10px;">
+        </div>
+        <div style="width: 15%;float: left;padding-top: 30px;">
+            <a href="searchResult.html" id="searchButton" class="btn btn-default" style="margin-left: 5px; width: 100%; height: 30px;">Search</a>
+        </div>
+    </div>
+  
+    <div class="category">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header" style="float: left;">
+              <a class="navbar-brand" href="Categories.html" >Categories</a>
+            </div>
+                <ul class="nav nav-justified">
+<!--               <li class="active"><a href="#">Home</a></li> -->
+                  <li><a href="Categories.html" style="padding:15px;">Sci-Fi</a></li>
+                  <li><a href="Categories2.html" style="padding:15px;">Drama</a></li>
+                  <li><a href="Categories3.html" style="padding:15px;">Romance</a></li>
+                  <li><a href="Categories4.html" style="padding:15px;">Mystery</a></li>
+                  <li><a href="Categories5.html" style="padding:15px;">Horror</a></li>
+                  <li><a href="Categories6.html" style="padding:15px;">Other...</a></li>
+                </ul> 
+          </div>
+        </nav>
+    </div>
+    <!-- mainbody -->
+
+    <div class="book-info-container">
+
+      <div class="book-info-image-container">
+        <div class="book-image-info">
+          <img id="bigPicture" src="books/horror.jpg" style="width: 490px; height: 490px;">
+        </div>
+        <div class="book-image-thumbnail">
+          <div id="th1" style="height: 50px; width: 50px;"> </div>
+          <div id="th2" style="height: 50px; width: 50px;"> </div>
+        </div>
+      </div>
+
+
+      <div class="book-info-price-container">
+        <div style="font-size: 20px; border-bottom: 1px solid #b0b3b7; margin-bottom: 10px;">
+          The Replacement by Brenna Yovanoff
+        </div>
+
+        <div style="background-color: white; font-size:15px; padding: 15px; line-height: 25px;">
+          Price: $99.99 <br>
+          Quantity:
+          <select class="form-control" id="sel1" style="width: 60px; display: inline-block;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select> / 5 <br>
+          Shipping: $12.52
+          <button type="button" class="btn btn-primary" id="addToCart" style="float: right; margin-top: -35px;">Add To Cart</button>
+        </div>
+
+        <div style="font-size: 20px; padding: 10px; margin-top: 20px; background-color: white;">
+          Description
+        </div>
+        <div style="background-color: white; padding: 10px;">
+          Mackie Doyle is not one of us. Though he lives in the small town of Gentry, he comes from a world of tunnels and black murky water, a world of living dead girls ruled by a little tattooed princess. He is a Replacement, left in the crib of a human baby sixteen years ago. Now, because of fatal allergies to iron, blood, and consecrated ground, Mackie is fighting to survive in the human world. <br><br>
+
+          Mackie would give anything to live among us, to practice on his bass or spend time with his crush, Tate. But when Tate's baby sister goes missing, Mackie is drawn irrevocably into the underworld of Gentry, known as Mayhem. He must face the dark creatures of the Slag Heaps and find his rightful place, in our world, or theirs.
+        </div>
+      </div>
+
+      <div class="related-books" >
+        Related Books <br>
+        <div class="scroll-inner">
+          <div class="book-container" style="border: 1px solid; width: 205px;">
+            <a href="bookInfo.html">
+              <div class="book-image">
+                <img src="books/b1.png" >
+              </div>
+              <div class="book-info" style="font-size: 16px; text-align: center;">
+                Price: $99.99 <br>
+                Stock: 1
+              </div>
+              </a>
+          </div>
+          <div class="book-container" style="border: 1px solid; width: 205px;">
+            <a href="bookInfo.html">
+              <div class="book-image-info" style="width: 200px; height: 200px;">
+                <img src="books/drama.jpg" style="width: 200px; height: 200px;">
+              </div>
+              <div class="book-info" style="padding: 10px; font-size: 16px; text-align: center;">
+                Price: $99.99 <br>
+                Stock: 1
+              </div>
+              </a>
+          </div>
+          <div class="book-container" style="border: 1px solid; width: 205px;">
+            <a href="bookInfo.html">
+              <div class="book-image-info" style="width: 200px; height: 200px;">
+                <img src="books/mystery.jpg" style="width: 200px; height: 200px;">
+              </div>
+              <div class="book-info" style="padding: 10px; font-size: 16px; text-align: center;">
+                Price: $99.99 <br>
+                Stock: 1
+              </div>
+              </a>
+          </div>
+          <div class="book-container" style="border: 1px solid; width: 205px;">
+            <a href="bookInfo.html">
+              <div class="book-image-info" style="width: 200px; height: 200px;">
+                <img src="books/other.jpg" style="width: 200px; height: 200px;">
+              </div>
+              <div class="book-info" style="padding: 10px; font-size: 16px; text-align: center;">
+                Price: $99.99 <br>
+                Stock: 1
+              </div>
+              </a>
+          </div>
+          <div class="book-container" style="border: 1px solid; width: 205px;">
+            <a href="bookInfo.html">
+              <div class="book-image-info" style="width: 200px; height: 200px;">
+                <img src="books/romance.jpg" style="width: 200px; height: 200px;">
+              </div>
+              <div class="book-info" style="padding: 10px; font-size: 16px; text-align: center;">
+                Price: $99.99 <br>
+                Stock: 1
+              </div>
+              </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footter -->
+    <div class="footter">
+        <div style="width: 30%; margin-left: 20%; float: left; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Contact Information  
+            </div>
+            Email: khb@bookers.org <br>
+            Fax: (000)-111-2222 <br>
+            Phone: (416)-223-1234 <br>
+        </div>
+        <div style="width: 30%; margin-right: 20%; float: right; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Other  
+            </div>
+            Copyright © 2017 Kevin Huanfu
+        </div>
+    </div>
+</body>
+</html>

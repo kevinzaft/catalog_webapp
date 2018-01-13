@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kevin Huangfu Books</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="kevinzaft.css">
+
+    <script>
+      $(function() {
+         $('#searchButton').click(function() {
+             if($("#searchField").val() === ""){
+              alert("Search field cannot be blank");
+              return false;
+             }
+         });        
+     });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div style="display: inline-block;">
+            Welcome
+        </div>
+        
+        <div class="home-button">
+            <a href="main.html">
+                <img src="home-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+
+        <div class="cart-button">
+            <a href="cart.html">
+                <img src="cart-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <div style="width: 150px;float: left;">
+            <a href="main.html">
+                <img src="books-logo.png" style="width:150px;height:100px;border:0;">
+            </a>
+        </div>
+        <div style="width: 75%;float: left; padding-top: 30px;padding-left: 10px;">
+            <input id="searchField" class="form-control" placeholder="Search a title, keyword or author" type="text" name="search field" style="width: 100%;height: 30px;padding-left: 10px;">
+        </div>
+        <div style="width: 15%;float: left;padding-top: 30px;">
+            <a href="searchResult.html" id="searchButton" class="btn btn-default" style="margin-left: 5px; width: 100%; height: 30px;">Search</a>
+        </div>
+    </div>
+  
+    <div class="category">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header" style="float: left;">
+              <a class="navbar-brand" href="Categories.html" >Categories</a>
+            </div>
+                <ul class="nav nav-justified">
+<!--               <li class="active"><a href="#">Home</a></li> -->
+                  <li><a href="Categories.html" style="padding:15px;" id="cat1">Sci-Fi</a></li>
+                  <li><a href="Categories2.html" style="padding:15px;" id="cat2">Drama</a></li>
+                  <li><a href="Categories3.html" style="padding:15px;" id="cat3">Romance</a></li>
+                  <li><a href="Categories4.html" style="padding:15px;" id="cat4">Mystery</a></li>
+                  <li><a href="Categories5.html" style="padding:15px;" id="cat5">Horror</a></li>
+                  <li><a href="Categories6.html" style="padding:15px;" id="cat6">Other...</a></li>
+                </ul> 
+          </div>
+        </nav>
+    </div>
+    <!-- mainbody -->
+    
+    <div class="category1" id="catbody1" style="display: block;">
+      <div class="title">
+        Closest Match Search Results
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 1
+          </div>
+          </a>
+      </div>
+      
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 2
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 3
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 4
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 5
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/b1.png" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 6
+          </div>
+          </a>
+      </div>
+    </div>
+    
+    <div class="category1" id="catbody2" style="display: block;">
+      <div class="title">
+        Possible Other Results
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 1
+          </div>
+          </a>
+      </div>
+      
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 2
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 3
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 4
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 5
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 6
+          </div>
+          </a>
+      </div>
+
+      <div class="book-container">
+        <a href="bookInfo.html">
+          <div class="book-image">
+            <img src="books/drama.jpg" >
+          </div>
+          <div class="book-info">
+            Price: $99.99 <br>
+            Stock: 7
+          </div>
+          </a>
+      </div>
+    </div>
+    <!-- footter -->
+    <div class="footter">
+        <div style="width: 30%; margin-left: 20%; float: left; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Contact Information  
+            </div>
+            Email: khb@bookers.org <br>
+            Fax: (000)-111-2222 <br>
+            Phone: (416)-223-1234 <br>
+        </div>
+        <div style="width: 30%; margin-right: 20%; float: right; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Other  
+            </div>
+            Copyright © 2017 Kevin Huanfu
+        </div>
+    </div>
+</body>
+</html>

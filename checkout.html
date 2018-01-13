@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kevin Huangfu Books</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="kevinzaft.css">
+
+    <script>
+
+      $(function() {
+       $('#coupon').click(function(){
+        if ($("#couponField").val() === ("coupon")){
+          alert("Coupon Applied: No Tax")
+          $("#totalCost").text("Total Cost: $99.99");
+        }
+        else{
+          alert("Not a real coupon")
+          $("#totalCost").text("Total Cost: $122.99");
+        }
+
+         return false;
+       });
+      });
+
+      $(function() {
+       $('#placeOrder').click(function(){
+        
+        if(($('#r1').is(':checked')) ||( $('#r2').is(':checked') )|| ($('#r3').is(':checked'))) { 
+        
+        }
+        else{
+          alert("Please select a payment method")
+          return false;
+        }
+
+        if($('#country').val() === ""){
+          alert("Country/Region cannot be blank")
+          return false;
+        }
+        else if($('#fullName').val() === ""){
+          alert("Full name cannot be blank")
+          return false;
+        }
+        else if($('#phone').val() === ""){
+          alert("Phone number cannot be blank")
+          return false;
+        }
+        else if($('#street').val() === ""){
+          alert("Street name cannot be blank")
+          return false;
+        }
+        else if($('#city').val() === ""){
+          alert("City name cannot be blank")
+          return false;
+        }
+        else if($('#province').val() === ""){
+          alert("province name cannot be blank")
+          return false;
+        }
+        else if($('#postal').val() === ""){
+          alert("Postal code cannot be blank")
+          return false;
+        }
+        else {
+          alert ("Order Placed")
+        }
+         
+       });
+      });
+
+    </script>
+    
+</head>
+<body>
+    <div class="header">
+        <div style="display: inline-block;">
+            Welcome
+        </div>
+        
+        <div class="home-button">
+            <a href="main.html">
+                <img src="home-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+
+        <div class="cart-button">
+            <a href="cart.html">
+                <img src="cart-icon.png" style="width:50px;height:50px;border:0;">
+            </a>
+        </div>
+    </div>
+
+    <div class="search-bar">
+
+    </div>
+  
+
+    <!-- mainbody -->
+    <div style="width: 73%; margin:auto;">
+      <div style="display: inline-block;">
+        <div class="title" style="width: 70%;">
+            Pay With *
+          </div>
+        <div class="category1" id="catbody1" style="display: block; width: 70%; margin: 0;">
+          <div class="radio" style="margin: 20px;">
+            <label><input id="r1" type="radio" name="optradio">PayPal</label>
+            <img src="paypal.png" style="width: 100px; height: auto; margin-left: 50px;">
+          </div>
+          <div class="radio" style="margin: 20px;">
+            <label><input id="r2" type="radio" name="optradio">Credit Card</label>
+            <img src="creditcard.png" style="width: 100px; height: auto; margin-left: 50px;">
+          </div>
+          <div class="radio" style="margin: 20px;">
+            <label><input id="r3" type="radio" name="optradio">Cash On Delivery</label>
+            <img src="cash.png" style="width: 100px; height: auto; margin-left: 50px;">
+          </div>
+        </div>
+        
+        <div class="title" style="width: 70%;">
+            Ship To
+          </div>
+        <div class="category1" id="catbody2" style="display: block; width: 70%; margin: 0 0 20px 0px;">
+          <div class="form-group">
+            <label for="inputdefault">Country or Region*</label>
+            <input id="country" class="form-control" id="inputdefault" type="text">
+          </div>
+          <div class="form-group">
+            <label for="inputdefault">Full Name*</label>
+            <input id="fullName" class="form-control" id="inputdefault" type="text">
+          </div>
+          <div class="form-group">
+            <label for="inputdefault">Phone Number*</label>
+            <input id="phone" class="form-control" id="inputdefault" type="text">
+          </div>
+          <div class="form-group">
+            <label for="inputdefault">Street Address*</label>
+            <input id="street" class="form-control" id="inputdefault" type="text">
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-4">
+              <label for="ex1">City*</label>
+              <input id="city" class="form-control" id="ex1" type="text">
+            </div>
+            <div class="col-xs-4">
+              <label for="ex1">Province*</label>
+              <input id="province" class="form-control" id="ex1" type="text">
+            </div>
+            <div class="col-xs-4">
+              <label for="ex1">Postal Code*</label>
+              <input id="postal" class="form-control" id="ex1" type="text">
+          </div>
+          </div>
+        </div>
+        * required field
+      </div>
+
+      <div style="display: inline-block; width: 38%; display: inline-block; vertical-align: top;">
+        <div class="title">
+            Summary
+        </div>
+        <div class="category1" id="catbody1" style="display: inline-block; width: 90%; margin: 0; vertical-align: top;">
+          The Hound Of The Baskervilles x 1 &nbsp; &nbsp; &nbsp; &nbsp; $99.99 <br>
+          Shipping &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FREE <br>
+          Tax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $13.00 <br><br>
+          <div class="form-group row">
+            <div class="col-xs-8">
+              <label for="ex1">Coupon</label>
+              <input id="couponField" class="form-control" id="ex1" type="text">
+            </div>
+            <button id="coupon" style="margin-top: 25px;" type="button" class="btn btn-primary">Apply</button>
+          </div>
+          <div id="totalCost" style="font-size: 20px;">
+            Total Cost: $122.99 
+          </div><br>
+          <a href="finished.html">
+          <button id="placeOrder" type="button" class="btn btn-success" style="width: 80%; margin:auto; display: block;">Place Order</button>
+          <a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- footter -->
+    <div class="footter">
+        <div style="width: 30%; margin-left: 20%; float: left; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Contact Information  
+            </div>
+            Email: khb@bookers.org <br>
+            Fax: (000)-111-2222 <br>
+            Phone: (416)-223-1234 <br>
+        </div>
+        <div style="width: 30%; margin-right: 20%; float: right; display: inline-block; text-align: center;">
+            <div style="font-size: 25px;">
+              Other  
+            </div>
+            Copyright © 2017 Kevin Huanfu
+        </div>
+    </div>
+</body>
+</html>
